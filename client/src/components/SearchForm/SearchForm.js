@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { useStoreContext } from "../../utils/GlobalState";
 import API from "../../utils/API";
 import { LOADING, RESULTS } from "../../utils/actions";
+import "./search.css";
 
 function SearchForm() {
   const queryRef = useRef();
@@ -40,8 +41,8 @@ function SearchForm() {
 
   return (
     <div className="container">
-      <form>
-        <div className="form-group">
+      <form className="shadow">
+        <div className="form-group ">
           <label>Search Book by Title</label>
           <input
             ref={queryRef}

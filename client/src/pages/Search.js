@@ -6,7 +6,6 @@ function Search() {
   return (
     <div>
       <SearchFrom />
-
       <Results />
     </div>
   );
