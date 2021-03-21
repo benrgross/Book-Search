@@ -1,5 +1,11 @@
 import React, { useReducer, createContext, useContext } from "react";
-import { LOADING, REMOVE_BOOK, RESULTS, SET_SAVED_BOOK } from "./actions";
+import {
+  ADD_BOOK,
+  LOADING,
+  REMOVE_BOOK,
+  RESULTS,
+  SET_SAVED_BOOK,
+} from "./actions";
 
 // Don't forget to import all of your actions!
 const StoreContext = createContext();
@@ -9,7 +15,8 @@ const reducer = (state, action) => {
   switch (action.type) {
     case RESULTS:
       return {
-        books: action.results,
+        ...state,
+        results: action.results,
         loading: false,
       };
     case SET_SAVED_BOOK:
@@ -19,9 +26,14 @@ const reducer = (state, action) => {
         books: action.saved,
         loading: false,
       };
-    case REMOVE_BOOK:
-      return state;
 
+    case REMOVE_BOOK:
+      return {
+        ...state,
+        books: state.books.filter((book) => {
+          return book._id !== action._id;
+        }),
+      };
     case LOADING:
       return {
         ...state,
@@ -36,8 +48,8 @@ const StoreProvider = ({ value = [], ...props }) => {
   const [state, dispatch] = useReducer(reducer, {
     books: [{}],
     book: {},
-    saved: [],
-    loading: true,
+    results: [{}],
+    loading: false,
   });
 
   return <Provider value={[state, dispatch]} {...props} />;

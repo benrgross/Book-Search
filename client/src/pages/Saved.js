@@ -6,7 +6,7 @@ import API from "../utils/API";
 
 function Saved() {
   const [state, dispatch] = useStoreContext();
-
+  console.log(state.book);
   const getSavedBooks = async () => {
     dispatch({ type: LOADING });
     try {
@@ -16,6 +16,7 @@ function Saved() {
         type: SET_SAVED_BOOK,
         saved: data,
       });
+      console.log(data);
     } catch (error) {
       console.log(error);
     }
@@ -29,12 +30,13 @@ function Saved() {
     <div>
       {state.books.map((save) => (
         <SavedBooks
-          key={save.title}
+          key={save._id}
+          id={save._id}
           title={save.title}
           authors={save.authors}
           img={save.img}
           description={save.description}
-          infoLink={save.infoLink}
+          infoLink={save.link}
         />
       ))}
     </div>

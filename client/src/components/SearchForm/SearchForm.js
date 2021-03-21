@@ -24,14 +24,14 @@ function SearchForm() {
           authors: item.volumeInfo.authors,
           description: item.volumeInfo.description,
           img: item.volumeInfo.imageLinks,
-          infoLink: item.volumeInfo.infoLink,
+          link: item.volumeInfo.infoLink,
         };
       });
       dispatch({
         type: RESULTS,
         results: results,
       });
-      console.log(state);
+      console.log("search", state);
       console.log(results);
     } catch (error) {
       console.log(error);

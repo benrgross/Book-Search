@@ -11,19 +11,18 @@ import Search from "./pages/Search";
 
 function App() {
   return (
-    <StoreProvider>
-      <Router>
-        <div>
-          <Navbar />
-          <Switch>
+    <Router>
+      <div>
+        <Navbar />
+        <Switch>
+          <StoreProvider>
             <Route exact path="/" component={Search} />
             <Route exact path="/saved" component={Saved} />
             <Route exact path="/books/:id" component={Book} />
-            <Route component={NoMatch} />
-          </Switch>
-        </div>
-      </Router>
-    </StoreProvider>
+          </StoreProvider>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
