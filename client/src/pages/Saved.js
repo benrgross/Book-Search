@@ -5,40 +5,39 @@ import { LOADING, SET_SAVED_BOOK } from "../utils/actions";
 import API from "../utils/API";
 
 function Saved() {
-  const [state, dispatch] = useStoreContext();
-  console.log(state.book);
-  const getSavedBooks = async () => {
-    dispatch({ type: LOADING });
-    try {
-      const { data } = await API.getBooks();
+  // const [state, dispatch] = useStoreContext();
 
-      dispatch({
-        type: SET_SAVED_BOOK,
-        saved: data,
-      });
-      console.log(data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  // console.log(state.book);
+  // const getSavedBooks = async () => {
+  //   dispatch({ type: LOADING });
+  //   try {
+  //     const { data } = await API.getBooks();
 
-  useEffect(() => {
-    getSavedBooks();
-  }, []);
+  //     dispatch({
+  //       type: SET_SAVED_BOOK,
+  //       saved: data,
+  //     });
+  //     console.log(data);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
 
+  // useEffect(() => {
+  //   getSavedBooks();
+  // }, []);
   return (
     <div>
-      {state.books.map((save) => (
-        <SavedBooks
-          key={save._id}
-          id={save._id}
-          title={save.title}
-          authors={save.authors}
-          img={save.img}
-          description={save.description}
-          infoLink={save.link}
-        />
-      ))}
+      {/* {state.books.map((save) => ( */}
+      <SavedBooks
+      // key={save._id}
+      // id={save._id}
+      // title={save.title}
+      // authors={save.authors}
+      // img={save.img}
+      // description={save.description}
+      // infoLink={save.link}
+      />
     </div>
   );
 }

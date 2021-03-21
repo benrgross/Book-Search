@@ -1,0 +1,36 @@
+img {
+  height: 250px !important;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  float: left;
+}
+
+.card-body {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.button {
+  margin-left: 350px !important;
+  margin-top: 20px;
+}
+
+.delete {
+  margin-right: 20px;
+}
+
+.book-header {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.body-border {
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  margin: 20px 20px 20px;
+}
+
+.saved {
+  margin-top: 50px;
+}

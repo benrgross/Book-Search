@@ -30,7 +30,11 @@ function Navbar() {
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/Saved" className="nav-link nav-text">
+            <Link
+              to="/Saved"
+              className="nav-link nav-text"
+              style={{ marginRight: "50px" }}
+            >
               Saved Books
             </Link>
           </li>

@@ -61,7 +61,6 @@ function Results() {
                     <div className="container img-container">
                       <img
                         className="img"
-                        // style={{ maxHeight: "250px", marginTop: "40px" }}
                         src={
                           book.img
                             ? book.img.thumbnail
@@ -81,7 +80,7 @@ function Results() {
             </div>
           ) : (
             <div className="row no-gutters">
-              <div className="col-md-4">
+              <div className="col-md-12 d-flex justify-content-center">
                 <h1>Search a Book Title for Results</h1>
               </div>
             </div>
