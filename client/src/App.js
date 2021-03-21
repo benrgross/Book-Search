@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Saved from "./pages/Saved";
 import Book from "./pages/Book";
-import NoMatch from "./pages/NoMatch";
+import Header from "./components/Header/Header";
 import { StoreProvider } from "./utils/GlobalState";
 import Navbar from "./components/Navbar/Navbar";
 import Search from "./pages/Search";
@@ -14,6 +14,7 @@ function App() {
     <Router>
       <div>
         <Navbar />
+        <Header />
         <Switch>
           <StoreProvider>
             <Route exact path="/" component={Search} />
