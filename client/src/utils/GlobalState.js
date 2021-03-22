@@ -1,3 +1,4 @@
+import { STATES } from "mongoose";
 import React, { useReducer, createContext, useContext } from "react";
 import {
   ADD_BOOK,
@@ -33,6 +34,7 @@ const reducer = (state, action) => {
         books: state.books.filter((book) => {
           return book._id !== action._id;
         }),
+        lading: false,
       };
     case LOADING:
       return {
