@@ -16,6 +16,9 @@ function Results() {
       img: book.img.thumbnail,
       link: book.link,
     };
+    alert(
+      `You added ${book.title} to your saved books. Go to the saved books page to view it.`
+    );
     try {
       const postBook = await API.saveBook(savedBook);
       console.log(postBook);
@@ -42,7 +45,7 @@ function Results() {
                   </div>
                 </div>
 
-                <div className="col-md-4">
+                <div className="col-md-5">
                   <div className="button container">
                     <button
                       className="btn btn-success save"
@@ -86,7 +89,9 @@ function Results() {
           ) : (
             <div className="row no-gutters">
               <div className="col-md-12 d-flex justify-content-center">
-                <h1>Search a Book Title for Results</h1>
+                <h1 style={{ marginTop: "50px" }}>
+                  Search A Book Title For Results
+                </h1>
               </div>
             </div>
           )}

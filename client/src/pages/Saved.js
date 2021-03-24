@@ -26,18 +26,10 @@ function Saved() {
   useEffect(() => {
     getSavedBooks();
   }, []);
+
   return (
     <div>
-      {/* {state.books.map((save) => ( */}
-      <SavedBooks
-      // key={save._id}
-      // id={save._id}
-      // title={save.title}
-      // authors={save.authors}
-      // img={save.img}
-      // description={save.description}
-      // infoLink={save.link}
-      />
+      <SavedBooks />
     </div>
   );
 }

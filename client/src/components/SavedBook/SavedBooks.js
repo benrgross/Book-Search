@@ -49,7 +49,7 @@ function SavedBooks() {
           {state.books.length >= 1 ? (
             <div className="card mb-3 shadow saved" key={book._id}>
               <div className="row no-gutters">
-                <div className="col-md-4">
+                <div className="col-sm-6 col-md-6">
                   <div className="book-header">
                     <h5 className="">{book.title}</h5>
                     {book.authors ? (
@@ -60,8 +60,8 @@ function SavedBooks() {
                   </div>
                 </div>
 
-                <div className="col-md-4">
-                  <div className="button container">
+                <div className=" col-sm-6 col-md-6">
+                  <div className="button">
                     <button
                       className="btn btn-success delete"
                       onClick={() => deleteSaved(book._id)}
@@ -99,7 +99,10 @@ function SavedBooks() {
             </div>
           ) : (
             <div className="row no-gutters">
-              <div className="col-md-12 d-flex justify-content-center">
+              <div
+                style={{ marginTop: "50px" }}
+                className="col-md-12 d-flex justify-content-center"
+              >
                 <h1>No Saved Books</h1>
               </div>
             </div>

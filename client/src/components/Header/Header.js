@@ -5,7 +5,7 @@ function Header() {
   return (
     <div className="row header">
       <div className="col-md-12 d-flex justify-content-center">
-        <h1> Google Books Search Buddy </h1>
+        <h1> Google Books Library </h1>
       </div>
     </div>
   );

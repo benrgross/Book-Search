@@ -13,7 +13,7 @@ img {
 }
 
 .button {
-  margin-left: 350px !important;
+  margin-left: 200px !important;
   margin-top: 20px;
 }
 
@@ -33,4 +33,12 @@ img {
 
 .saved {
   margin-top: 50px;
+}
+
+a {
+  margin-top: 5px;
+}
+
+.btn {
+  margin-top: 5px !important;
 }

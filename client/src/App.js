@@ -6,6 +6,7 @@ import Header from "./components/Header/Header";
 import { StoreProvider } from "./utils/GlobalState";
 import Navbar from "./components/Navbar/Navbar";
 import Search from "./pages/Search";
+import Footer from "./components/Footer/Footer";
 
 //use global context
 
@@ -20,9 +21,9 @@ function App() {
             <Route exact path="/" component={Search} />
             <Route exact path="/saved" component={Saved} />
             <Route exact path="/books/:id" component={Book} />
-            {/* <Route component={NoMatch} /> */}
           </StoreProvider>
         </Switch>
+        <Footer />
       </div>
     </Router>
   );

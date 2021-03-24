@@ -10,9 +10,11 @@
 
 ## Description
 
-This webpage is my personal portfolio built using React and utilizing the react router, reusable components, state and the react-springs npm package for animations.
+The Google Book Search allows the user to search the google books api in an easy to UI. The user can search books by title and then save books to the saved books page. This a MERN stack react app built using global state and context providers.
 
 ## Usage
+
+![app-demo](/client/public/book.gif)
 
 deployed webpage here: https://dashboard.heroku.com/apps/benrgross-portfolio
 
