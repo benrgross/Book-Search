@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import API from "../../utils/API";
 import { useStoreContext } from "../../utils/GlobalState";
 import "./results.css";
@@ -18,6 +18,7 @@ function Results() {
     };
     try {
       const postBook = await API.saveBook(savedBook);
+      console.log(postBook);
     } catch (error) {
       console.log(error);
     }
@@ -33,7 +34,11 @@ function Results() {
                 <div className="col-md-4">
                   <div className="book-header">
                     <h5 className="">{book.title}</h5>
-                    <p className="card-text">{book.authors.join(", ")}</p>
+                    {book.authors ? (
+                      <p className="card-text">{book.authors.join(", ")}</p>
+                    ) : (
+                      <p className="card-text">{book.authors} </p>
+                    )}
                   </div>
                 </div>
 

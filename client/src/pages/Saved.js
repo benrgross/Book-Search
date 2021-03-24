@@ -5,27 +5,27 @@ import { LOADING, SET_SAVED_BOOK } from "../utils/actions";
 import API from "../utils/API";
 
 function Saved() {
-  // const [state, dispatch] = useStoreContext();
+  const [state, dispatch] = useStoreContext();
 
-  // console.log(state.book);
-  // const getSavedBooks = async () => {
-  //   dispatch({ type: LOADING });
-  //   try {
-  //     const { data } = await API.getBooks();
+  console.log(state.book);
+  const getSavedBooks = async () => {
+    dispatch({ type: LOADING });
+    try {
+      const { data } = await API.getBooks();
 
-  //     dispatch({
-  //       type: SET_SAVED_BOOK,
-  //       saved: data,
-  //     });
-  //     console.log(data);
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
+      dispatch({
+        type: SET_SAVED_BOOK,
+        saved: data,
+      });
+      console.log(data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
-  // useEffect(() => {
-  //   getSavedBooks();
-  // }, []);
+  useEffect(() => {
+    getSavedBooks();
+  }, []);
   return (
     <div>
       {/* {state.books.map((save) => ( */}

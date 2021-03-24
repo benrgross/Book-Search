@@ -21,32 +21,32 @@ function SavedBooks() {
     }
   };
   console.log(state.book);
-  const getSavedBooks = async () => {
-    dispatch({ type: LOADING });
-    try {
-      const { data } = await API.getBooks();
+  // const getSavedBooks = async () => {
+  //   dispatch({ type: LOADING });
+  //   try {
+  //     const { data } = await API.getBooks();
 
-      dispatch({
-        type: SET_SAVED_BOOK,
-        saved: data,
-      });
-      console.log(data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  //     dispatch({
+  //       type: SET_SAVED_BOOK,
+  //       saved: data,
+  //     });
+  //     console.log(data);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
 
-  console.log("test", state.books[0]);
+  // console.log("test", state.books[0]);
 
-  useEffect(() => {
-    getSavedBooks();
-  }, []);
+  // useEffect(() => {
+  //   getSavedBooks();
+  // }, []);
 
   return (
     <div className="container">
       {state.books.map((book) => (
         <div>
-          {state.books.length > 1 ? (
+          {state.books.length >= 1 ? (
             <div className="card mb-3 shadow saved" key={book._id}>
               <div className="row no-gutters">
                 <div className="col-md-4">
